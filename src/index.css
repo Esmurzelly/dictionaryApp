@@ -6,11 +6,35 @@
 .flex {
   display: flex;
   flex-direction: row;
+  flex-basis: 100%;
+  flex-wrap: wrap;
 }
 
 .pl-20 {
   padding-left: 20px;
   height: 20px;
+}
+
+.manage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width: 413px) {
+  .manage > .button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 365px) {
+  .manage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .manage > .button {
+    margin-left: 0;
+  }
 }
 
 .mt-20 {
@@ -85,14 +109,9 @@ input {
 
 .audio {
   cursor: pointer;
-  border-radius: 200px;
-  border: 1px solid black;
-  width: 100px;
   text-align: center;
-}
-
-.audio:hover {
-  background-color: #83a4d4;
-  color: white;
-  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 }

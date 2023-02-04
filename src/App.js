@@ -35,15 +35,18 @@ function App() {
 
   return (
     <div className="App">
-      <input value={keyWord} onChange={(e) => setKeyWord(e.target.value) }/>
+      <div className="manage">
+        <input value={keyWord} onChange={(e) => setKeyWord(e.target.value) }/>
 
-      <button className="button" type="submit" onClick={handleSearch}>
-        Search
-      </button>
+        <button className="button" type="submit" onClick={handleSearch}>
+          Search
+        </button>
 
-      <button className="button" type="submit" disabled={!result} onClick={handleClear}>
-        Clear
-      </button>
+        <button className="button" type="submit" disabled={!result} onClick={handleClear}>
+          Clear
+        </button>
+      </div>
+     
 
       {result && <ListDetails
          updateData={updateData}

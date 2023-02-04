@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {AiFillPlayCircle} from 'react-icons/ai';
 
 const ListDetails = ({word, phonetics, meanings, updateData}) => {
     // const {word, phonetics, meanings} = result;
@@ -25,7 +26,7 @@ const ListDetails = ({word, phonetics, meanings, updateData}) => {
                     <p className="pl-20">{phonetics[0].text}</p>
                     <div className="pl-20">
                         <p className="audio" onClick={playAudio}>
-                            Play audio
+                            <AiFillPlayCircle className='audio' onClick={playAudio}/> play
                         </p>
                     </div>
                 </div>
